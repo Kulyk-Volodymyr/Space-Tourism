@@ -1,0 +1,127 @@
+@import "../../_scss";
+
+.sliderInfo {
+  max-width: 420px;
+  padding-top: 2.75rem !important;
+  position: relative;
+  @include screen-min-768 {
+    max-width: 460px;
+    padding-top: 0rem !important;
+    padding-bottom: 1.75rem !important;
+  }
+  @include screen-min-1024 {
+    left: 0;
+    max-width: 440px;
+    padding-bottom: 5rem !important;
+    position: absolute;
+    top: 8.5rem;
+  }
+  @include screen-min-1120 {
+    max-width: 620px;
+    top: 9.5rem;
+  }
+
+  &__slide {
+    text-align: center;
+    @include screen-min-1024 {
+      text-align: left;
+    }
+
+    &_position {
+      font-family: "Bellefair", serif;
+      font-size: 1rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+      opacity: 0.6;
+      @include screen-min-576 {
+        font-size: 1.25rem;
+      }
+      @include screen-min-768 {
+        font-size: 1.5rem;
+        letter-spacing: 0px;
+      }
+      @include screen-min-1024 {
+        font-size: 2rem;
+      }
+    }
+
+    &_name {
+      font-family: "Bellefair", serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1px;
+      margin-top: 0.5rem;
+      margin-bottom: 0.75rem;
+      @include screen-min-576 {
+        font-size: 2rem;
+      }
+      @include screen-min-768 {
+        font-size: 2.5rem;
+        letter-spacing: 0px;
+        margin-bottom: 0.5rem;
+      }
+      @include screen-min-1024 {
+        font-size: 3.5rem;
+        margin-block: 1rem;
+      }
+    }
+
+    &_info {
+      color: $color-light-purple;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.875rem;
+      font-weight: lighter;
+      line-height: 1.8;
+      letter-spacing: 0.1px;
+      @include screen-min-768 {
+        letter-spacing: 0.6px;
+        line-height: 2;
+      }
+      @include screen-min-1024 {
+        font-size: 1rem;
+        max-width: 450px;
+      }
+    }
+  }
+
+  :global(.swiper-pagination) {
+    top: 0 !important;
+    bottom: auto !important;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    @include screen-min-768 {
+      top: auto !important;
+      bottom: 0 !important;
+    }
+    @include screen-min-1024 {
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+  }
+
+  :global(.swiper-pagination-bullet) {
+    background-color: rgba($color-white, 0.5);
+    border-radius: 0.31rem;
+    height: 0.62rem;
+    opacity: 1;
+    transition: 0.4s;
+    width: 0.62rem;
+    @include screen-min-1024 {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 0.5rem;
+    }
+  }
+
+  :global(.swiper-pagination-bullet:hover) {
+    background-color: rgba($color-white, 0.75);
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: $color-white;
+    pointer-events: none;
+  }
+}

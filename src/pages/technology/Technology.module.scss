@@ -1,0 +1,64 @@
+@import "../../_scss";
+
+.main {
+  @include background(
+    "../../assets/technology/background-technology-mobile.jpg",
+    "../../assets/technology/background-technology-tablet.jpg",
+    "../../assets/technology/background-technology-desktop.jpg"
+  );
+}
+
+.content {
+  padding: 5.5rem 2rem 2rem 2rem;
+  @include screen-min-768 {
+    padding: 8.5rem 2.5rem 3.75rem 2.5rem;
+  }
+  @include screen-min-1024 {
+    padding: 13.25rem 3.5rem 1.5rem 3.5rem;
+    margin: 0 auto;
+    max-width: calc(1100px + 7rem);
+  }
+}
+
+.sliders {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @include screen-min-768 {
+    gap: 3.5rem;
+  }
+  @include screen-min-1024 {
+    flex-direction: row-reverse;
+    gap: 2rem;
+    margin: auto;
+    max-width: 1500px;
+    position: relative;
+  }
+
+  &__sliderImage {
+    width: 100%;
+    @include screen-min-1024 {
+      position: relative;
+      width: 515px;
+    }
+  }
+
+  &__sliderinfo {
+    max-width: 500px;
+    margin: auto;
+    padding-inline: 2rem;
+    width: 100%;
+    @include screen-min-1024 {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+      left: 0;
+      max-width: calc(1100px + 7rem);
+      padding: 0 3.5rem;
+      position: absolute;
+      right: 0;
+      height: 100%;
+    }
+  }
+}

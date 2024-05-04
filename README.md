@@ -14,7 +14,7 @@ This responsive multipage website is build with:
 ### Links
 
 - Live Site URL: [Netlify](https://discover-the-space.netlify.app/)
-- Solution URL: [Frontend Mentor](https://discover-the-space.netlify.app/)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/space-tourism-website-WY_S66t-0P)
 
 ![This is an image](desktop-preview.jpg)
 
